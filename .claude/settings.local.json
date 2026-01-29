@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: CSS syntax errors and add Vercel config\n\n- Fix duplicate .intro-progress block missing closing brace\n- Fix .root:{ to :root { selector syntax\n- Add vercel.json with output directory config\n- Add tsconfig.json and tsconfig.node.json for TypeScript\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push)"
+    ]
+  }
+}
