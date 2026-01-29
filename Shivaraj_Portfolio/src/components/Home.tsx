@@ -114,7 +114,7 @@ export function Home() {
             <div className="social-group">
               <h5>Want to know more about me?</h5>
               <motion.a
-                href="/ai-portfolio"
+                href="https://ai-native-chatbot.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="chatbot-link"

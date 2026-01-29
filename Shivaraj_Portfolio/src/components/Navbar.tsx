@@ -36,7 +36,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScrollSpy);
   }, []);
 
-  const navItems = ['Home', 'About', 'Resume', 'Projects', 'Skills', 'Blog', 'Contact'];
+  const navItems = ['Home', 'About', 'Resume', 'Projects', 'Skills', 'Blog', 'Contact', 'Chatbot'];
 
   const scrollToSection = (item: string) => {
     const id = item.toLowerCase();
@@ -117,6 +117,27 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-2">
             {navItems.map((item, idx) => {
               const isActive = activeSection === item.toLowerCase();
+              const isChatbot = item === 'Chatbot';
+
+              if (isChatbot) {
+                return (
+                  <motion.a
+                    key={item}
+                    href="https://ai-native-chatbot.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 + idx * 0.05 }}
+                    className="relative px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 group text-white/70 hover:text-white"
+                  >
+                    <span className="absolute inset-0 rounded-full bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="relative z-10">{item}</span>
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 w-0 group-hover:w-6" />
+                  </motion.a>
+                );
+              }
+
               return (
                 <motion.button
                   key={item}
@@ -178,6 +199,25 @@ export function Navbar() {
 
           {navItems.map((item, idx) => {
             const isActive = activeSection === item.toLowerCase();
+            const isChatbot = item === 'Chatbot';
+
+            if (isChatbot) {
+              return (
+                <motion.a
+                  key={item}
+                  href="https://ai-native-chatbot.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.08 }}
+                  className="relative text-2xl font-semibold transition-all duration-300 text-white/80 hover:text-white"
+                >
+                  {item}
+                </motion.a>
+              );
+            }
+
             return (
               <motion.button
                 key={item}

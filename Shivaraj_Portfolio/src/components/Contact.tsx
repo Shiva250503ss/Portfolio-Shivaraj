@@ -155,7 +155,7 @@ export function Contact() {
               className="mt-8"
             >
               <a
-                href="/ai-portfolio"
+                href="https://ai-native-chatbot.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-xl

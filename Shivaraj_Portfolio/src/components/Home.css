@@ -249,13 +249,22 @@
 
 /* 14-inch laptops (1280-1440px) */
 @media (min-width: 1024px) and (max-width: 1440px) {
+  .hero-right-image {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
   .hero-image-container {
-    width: 95%;
-    max-width: 550px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
   }
 
   .hero-image {
-    transform: scale(1.15);
+    transform: scale(1);
+    max-height: 85vh;
+    object-fit: contain;
   }
 
   .hero-content-wrapper {
